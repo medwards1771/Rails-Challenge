@@ -33,6 +33,15 @@ These are the tasks we'd like you to complete:
 4. Currently there is no subhead field on the input form on the new posts page. Please add a form field for that database field. Additionally, please make an update to the view to showcase the subhead in a semantic way.
 5. We have a real SEO problem! The SEO on the index page is fine, but on the individual post pages we want the page title to be updated using the format: `Rails Based Blog - #{POST_TITLE}`. Additionally, we want to update the `description` meta value and `keywords` meta value to be the first two lines of the body and list of tags (comma-separated), respectively.
 
+
+### React Setup
+1. `npm install` to install React dependencies
+
+### React Tasks
+1. Create a new React component that should render below the post body on individual post pages. The component will display a list of existing comments, and a form for new comments.
+2. Make an AJAX request (you can use jQuery) to fetch the existing comments from the database. These will be returned in JSON format. Use this data to populate the list of comments in the React component.
+3. Create an HTML form in the React component that includes fields for name, email, and comment text and a submit button. Clicking the submit button should add the comment to the list of comments, as well as submit the data to the database using AJAX.
+
 ### Assumptions
 
 - We're expecting you to work on this alone without help from friends, colleagues and/or mentors. But we expect you to work on this in the same way that you'd work if you came to work for us. That means resources like Google, Stack Overflow, Rails Guides, etc., are totally at your disposal.
