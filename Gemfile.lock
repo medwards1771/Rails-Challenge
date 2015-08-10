@@ -40,11 +40,18 @@ GEM
     autoprefixer-rails (5.1.11)
       execjs
       json
+    babel-source (5.8.19)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.4.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    browserify-rails (1.2.0)
+      railties (>= 4.0.0, < 5.0)
+      sprockets (> 3.0.2)
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
@@ -56,6 +63,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
+    connection_pool (2.2.0)
     database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
@@ -122,6 +130,13 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.4.2)
+    react-rails (1.1.0)
+      babel-transpiler (>= 0.7.0)
+      coffee-script-source (~> 1.8)
+      connection_pool
+      execjs
+      rails (>= 3.2)
+      tilt
     rspec-core (3.2.3)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.1)
@@ -181,6 +196,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
+  browserify-rails
   byebug
   coffee-rails (~> 4.1.0)
   database_cleaner
@@ -193,6 +209,7 @@ DEPENDENCIES
   pg
   quiet_assets
   rails (= 4.2.0)
+  react-rails
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
@@ -201,3 +218,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.6

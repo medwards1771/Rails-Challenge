@@ -4,8 +4,8 @@
         <name><![CDATA[Posts]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>288.00</x>
-            <y>558.00</y>
+            <x>294.00</x>
+            <y>170.00</y>
         </location>
         <size>
             <width>213.00</width>
@@ -24,6 +24,7 @@
             <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[D3FE6CDC-96DD-42C5-AD05-4546BF6BC493]]></referencesFieldUID>
             <referencesTableUID><![CDATA[CC380EAD-096B-409A-868A-60C27868EFFE]]></referencesTableUID>
+            <forcedUnique><![CDATA[1]]></forcedUnique>
             <uid><![CDATA[E9513CC5-72BD-4075-9FB0-96F6202D89CC]]></uid>
         </SQLField>
         <SQLField>
@@ -71,8 +72,8 @@
         <name><![CDATA[Tags]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>31.00</x>
-            <y>628.00</y>
+            <x>37.00</x>
+            <y>250.00</y>
         </location>
         <size>
             <width>200.00</width>
@@ -110,11 +111,66 @@
         <uid><![CDATA[3559FDDE-49A7-4C57-8611-43E47E3653EA]]></uid>
     </SQLTable>
     <SQLTable>
+        <name><![CDATA[Comments]]></name>
+        <schema><![CDATA[]]></schema>
+        <location>
+            <x>557.00</x>
+            <y>89.00</y>
+        </location>
+        <size>
+            <width>209.00</width>
+            <height>140.00</height>
+        </size>
+        <zorder>4</zorder>
+        <SQLField>
+            <name><![CDATA[id]]></name>
+            <type><![CDATA[INTEGER(11)]]></type>
+            <primaryKey>1</primaryKey>
+            <autoIncrement><![CDATA[0]]></autoIncrement>
+            <uid><![CDATA[893D4563-9F52-45AF-8A16-A5F96A9A1435]]></uid>
+            <unique><![CDATA[1]]></unique>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[header]]></name>
+            <type><![CDATA[VARCHAR(255)]]></type>
+            <uid><![CDATA[047C173D-09E0-4100-A8AD-66BCC7E69A8D]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[body]]></name>
+            <type><![CDATA[TEXT]]></type>
+            <uid><![CDATA[533CC51D-AEF5-487D-90C1-035DD1EE03C5]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[post_id]]></name>
+            <type><![CDATA[INTEGER(11)]]></type>
+            <referencesField>id</referencesField>
+            <referencesTable>Posts</referencesTable>
+            <referencesField><![CDATA[id]]></referencesField>
+            <referencesTable><![CDATA[Posts]]></referencesTable>
+            <sourceCardinality>5</sourceCardinality>
+            <destinationCardinality>1</destinationCardinality>
+            <referencesFieldUID><![CDATA[E9513CC5-72BD-4075-9FB0-96F6202D89CC]]></referencesFieldUID>
+            <referencesTableUID><![CDATA[06FFEF2F-59CA-4D24-A300-3B30FFE0C5F0]]></referencesTableUID>
+            <uid><![CDATA[24D2245F-6D9F-4A97-9158-940DF542405E]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[created_at]]></name>
+            <type><![CDATA[DATETIME]]></type>
+            <uid><![CDATA[9F72DCC0-942E-4A49-B577-0D2D359C19C5]]></uid>
+        </SQLField>
+        <SQLField>
+            <name><![CDATA[updated_at]]></name>
+            <type><![CDATA[DATETIME]]></type>
+            <uid><![CDATA[A3D9AEBB-5D37-4D43-BD7A-4CD306B5FABF]]></uid>
+        </SQLField>
+        <uid><![CDATA[58731628-0409-41BB-937A-A68A23CA66AB]]></uid>
+    </SQLTable>
+    <SQLTable>
         <name><![CDATA[Posts_Tags]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>30.00</x>
-            <y>538.00</y>
+            <x>36.00</x>
+            <y>150.00</y>
         </location>
         <size>
             <width>201.00</width>
@@ -153,8 +209,8 @@
         <name><![CDATA[Authors]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>576.00</x>
-            <y>638.00</y>
+            <x>557.00</x>
+            <y>250.00</y>
         </location>
         <size>
             <width>212.00</width>
@@ -361,9 +417,9 @@ mZkLTlNQYXBlck5hbWWGkoSZmQluYS1sZXR0ZXKGhoY=
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[276.000000]]></SourceSidebarWidth>
         <uid><![CDATA[831AB4DF-24DD-48F4-BDBE-5520DC017842]]></uid>
-        <windowHeight><![CDATA[1024.000000]]></windowHeight>
-        <windowLocationX><![CDATA[442.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[26.000000]]></windowLocationY>
+        <windowHeight><![CDATA[877.000000]]></windowHeight>
+        <windowLocationX><![CDATA[21.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[0.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{0, 51}]]></windowScrollOrigin>
         <windowWidth><![CDATA[1317.000000]]></windowWidth>
     </SQLDocumentInfo>
