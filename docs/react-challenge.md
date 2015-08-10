@@ -25,7 +25,7 @@ There is an additional table `Posts_Tags` that contains the connection between a
 
 This is the relationship of the tables:
 
-![](https://raw.githubusercontent.com/EllevateFinancial/Rails-Challenge/master/public/db_schema_comments.png)
+![](https://raw.githubusercontent.com/Ellevest/Rails-Challenge/master/public/db_schema_comments.png)
 
 ### Tasks
 
