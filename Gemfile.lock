@@ -204,6 +204,7 @@ DEPENDENCIES
   faker
   font-awesome-rails
   jquery-rails
+  json (= 1.8.2)
   modernizr-rails
   non-stupid-digest-assets
   pg
