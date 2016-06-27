@@ -9,6 +9,6 @@ class Post < ActiveRecord::Base
   validates :author,  presence: true
 
   def created_at_prettier
-    "#{created_at.strftime("%B %C, %G at %l:%M %p")}"
+    "#{created_at.strftime("%B %d, %G at %l:%M %p")}"
   end
 end
