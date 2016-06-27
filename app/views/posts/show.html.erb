@@ -3,6 +3,9 @@
 <!-- Title -->
 <h1><%= @post.header %></h1>
 
+<!-- Sub Header -->
+<h4><%= @post.subheader %></h4>
+
 <!-- Author -->
 <p class="lead">
 by <a href="#"><%= @post.author.full_name %></a>
@@ -14,6 +17,5 @@ by <a href="#"><%= @post.author.full_name %></a>
 
 <hr>
 
-<!-- Try to find a way to do this using Nokogiri -->
 <p class="lead"><%= @post.body.split(/\n/).first %></p>
 <%= @post.body %>
