@@ -1,4 +1,7 @@
 <!-- Blog Post -->
+<% content_for :title do %>
+ Rails Based Blog - <%=@post.header%>
+<% end %>
 
 <!-- Title -->
 <h1><%= @post.header %></h1>
