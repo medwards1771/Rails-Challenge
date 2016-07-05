@@ -11,4 +11,12 @@ class Post < ActiveRecord::Base
   def created_at_prettier
     "#{created_at.strftime("%B %d, %G at %l:%M %p")}"
   end
+
+  def description
+    body.lines[0..1].join('').rstrip
+  end
+
+  def keywords
+    tags.collect { |tag| tag.name }.join(', ')
+  end
 end
