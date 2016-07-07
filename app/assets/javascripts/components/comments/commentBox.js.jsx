@@ -21,7 +21,7 @@ var CommentBox = React.createClass({
       <div className="comment-box">
         <CommentList comments={ this.state.comments } />
         <hr />
-        <h2>Add a comment:</h2>
+        <h2>Add a comment</h2>
         <CommentForm form={ this.state.form } onCommentSubmit={ this.handleCommentSubmit } />
       </div>
     );
