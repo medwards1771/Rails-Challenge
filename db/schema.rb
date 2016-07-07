@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20160705235308) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text     "body",       default: "", null: false
-    t.integer  "author_id",               null: false
+    t.string   "name",       default: "", null: false
+    t.string   "email",      default: "", null: false
+    t.string   "text",       default: "", null: false
     t.integer  "post_id",                 null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false

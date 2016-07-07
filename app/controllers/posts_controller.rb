@@ -5,6 +5,15 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @presenter = {
+      :comments => @post.comments,
+      :form => {
+        :action => comments_path,
+        :id => @post.id,
+        :csrf_param => request_forgery_protection_token,
+        :csrf_token => form_authenticity_token
+      }
+    }
   end
 
   def new

@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :author
   has_and_belongs_to_many :tags
+  has_many :comments
 
   validates :header,  presence: true,
                       length: { in: 5..50 }

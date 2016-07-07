@@ -26,3 +26,5 @@ by <a href="#"><%= @post.author.full_name %></a>
 
 <p class="lead"><%= @post.body.split(/\n/).first %></p>
 <%= @post.body %>
+
+<%= render partial: "/comments/index", locals: @presenter %>
