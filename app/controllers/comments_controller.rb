@@ -2,12 +2,10 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.save
-
-    if request.xhr?
-      render :json => @comment
+    if @comment.save
+      render json: { comment: @comment }
     else
-      redirect_to comments_path
+      render json: {errors: @comment.errors.full_messages}, status: 422
     end
   end
 

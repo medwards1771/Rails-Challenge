@@ -10,7 +10,8 @@ var CommentBox = React.createClass({
       type: "POST",
       dataType: "json",
       success: function ( data ) {
-        this.setState({ comments: data });
+        comments = this.getInitialState().comments.concat(data.comment);
+        this.setState({ comments: comments });
       }.bind(this)
     });
   },
@@ -18,7 +19,6 @@ var CommentBox = React.createClass({
   render: function () {
     return (
       <div className="comment-box">
-        <img src={ this.props.imgSrc } alt={ this.props.imgAlt } />
         <CommentList comments={ this.state.comments } />
         <hr />
         <h2>Add a comment:</h2>

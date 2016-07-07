@@ -6,6 +6,7 @@ var CommentList = React.createClass({
 
     return (
       <div className="comment-list">
+      <h3>Comments</h3>
         { commentNodes }
       </div>
     )
