@@ -9,10 +9,15 @@ var CommentBox = React.createClass({
       url: action,
       type: "POST",
       dataType: "json",
-      success: function ( data ) {
+      success: function (data) {
         comments = this.getInitialState().comments.concat(data.comment);
         this.setState({ comments: comments });
-      }.bind(this)
+      }.bind(this),
+      error: function(data) {
+        for (i = 0; i < data.responseJSON.errors.length; i++) {
+          $('.comment-form').addClass('alert alert-danger').append(data.responseJSON.errors[i]);
+        }
+      }
     });
   },
 
