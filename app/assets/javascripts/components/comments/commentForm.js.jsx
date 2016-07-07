@@ -6,20 +6,18 @@ var CommentForm = React.createClass({
     var email = this.refs.email.getDOMNode().value.trim();
     var text = this.refs.text.getDOMNode().value.trim();
 
-    // validate
     if (!name || !email || !text) {
       return false;
     }
 
-    // submit
     var formData = $( this.refs.form.getDOMNode() ).serialize();
     this.props.onCommentSubmit( formData, this.props.form.action );
 
-    // reset form
     this.refs.name.getDOMNode().value = "";
     this.refs.email.getDOMNode().value = "";
     this.refs.text.getDOMNode().value = "";
   },
+  
   render: function () {
     return (
       <form ref="form" className="comment-form" action={ this.props.form.action } acceptCharset="UTF-8" method="post" onSubmit={ this.handleSubmit }>
